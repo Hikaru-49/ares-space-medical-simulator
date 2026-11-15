@@ -3,7 +3,12 @@
 A modular, zero-trust medical telemetry simulation console built for spaceflight missions (Artemis II / ISS / Mars Transit). Developed for hackathon evaluation and bioastronautics research.
 
 ---
+## 🌐 Live Demo & Access
+**Live Streamlit App:** https://ares-space-medical-simulator.streamlit.app
 
+**GitHub Repository:** https://github.com/Hikaru-49/ares-space-medical-simulator
+
+---
 ## 🔑 Demo Access & Credentials (For Judges & Reviewers)
 
 To test the application instantly without manual registration, use the built-in demo credentials or click the **Quick Demo Bypass** buttons on the login screen:
