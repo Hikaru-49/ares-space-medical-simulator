@@ -1,0 +1,5 @@
+ares_telemetry.db
+.streamlit/secrets.toml
+__pycache__/
+.pytest_cache/
+.DS_Store
