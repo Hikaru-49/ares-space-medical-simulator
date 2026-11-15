@@ -347,6 +347,12 @@ elif st.session_state.screen == "login":
             else:
                 hud_callout(esc(msg), "err")
 
+        st.markdown("<div style='margin-top:10px;'></div>", unsafe_allow_html=True)
+        if st.button("⚡ QUICK DEMO BYPASS (JUDGES: OPEN ADMIN HUB)", use_container_width=True):
+            st.session_state.user_role = "MANAGEMENT"
+            st.session_state.screen = "admin_hub"
+            st.rerun()
+
     with col_crew:
         st.markdown("""
         <div class='hud-box'>
@@ -359,7 +365,7 @@ elif st.session_state.screen == "login":
         else:
             selected_crew = st.selectbox("Select Crewmember Identifier", crew_df["id"].tolist(),
                                          format_func=lambda x: f"{x} — {crew_df[crew_df['id']==x]['name'].values[0]}")
-            crew_pin = st.text_input("Crew Security PIN", value="", placeholder="Enter personal PIN...", type="password")
+            crew_pin = st.text_input("Crew Security PIN", value="", placeholder="Enter personal PIN (Demo: 1111)...", type="password")
             if st.button("OPEN PERSONAL CREW WORKSTATION", type="primary", use_container_width=True):
                 ok, msg = authenticate_crew_pin(selected_crew, crew_pin)
                 if ok:
@@ -370,6 +376,14 @@ elif st.session_state.screen == "login":
                     st.rerun()
                 else:
                     hud_callout(esc(msg), "err")
+
+        st.markdown("<div style='margin-top:10px;'></div>", unsafe_allow_html=True)
+        if st.button("⚡ QUICK DEMO BYPASS (JUDGES: OPEN ASTRO-001)", use_container_width=True):
+            st.session_state.user_role = "CREW"
+            st.session_state.active_astro = "ASTRO-001"
+            st.session_state.sim_env = "Earth Orbit (LEO Station)"
+            st.session_state.screen = "command"
+            st.rerun()
 
 # ==========================================
 # SCREEN 2: MANAGEMENT / FLIGHT SURGEON HUB
