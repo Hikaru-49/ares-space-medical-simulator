@@ -4,7 +4,7 @@ A modular, zero-trust medical telemetry simulation console built for spaceflight
 
 ---
 ## 🌐 Live Demo & Access
-**Live Streamlit App:** https://ares-space-medical-simulator.streamlit.app
+**Live Streamlit App:** [https://ares-space-medical-simulator.streamlit.app](https://ares-space-medical-simulator-w3ubzsq73hbtf5iearss57.streamlit.app/)
 
 **GitHub Repository:** https://github.com/Hikaru-49/ares-space-medical-simulator
 
